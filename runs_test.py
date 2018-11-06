@@ -1,3 +1,4 @@
+
 def runs_test(data):
 ### The function for conducting the runs test on a data in a numpy array or pandas series ###
     seq = (data > np.median(data))*1
@@ -14,9 +15,10 @@ def runs_test(data):
             v_prev=v
             
     z = (run - r_hat)/(var_r**0.5)
+   
     print('The z statistics is: {}'.format(z))
+    
     if abs(z) < 1.96:
-
         print('The data is produced in a random manner.')
     else:
         print('The data is not produced in a random manner.')
